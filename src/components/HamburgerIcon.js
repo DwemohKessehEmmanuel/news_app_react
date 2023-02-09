@@ -6,10 +6,7 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -50,7 +47,7 @@ function HamburgerIcon({setCategory}) {
       </List>
       <Divider />
       <List>
-        {categories.map((text, index) => (
+        {categories.map((text) => (
           <ListItem key={text} onClick={()=>setCategory(text)} style={{height:50,borderRadius:3}}>
             <ListItemButton>
               

@@ -23,14 +23,15 @@ const NewsCard = ({ newsItem }) => {
           <span className="title">{newsItem.title}</span>
           <br />{" "}
           <span className="author">
-            <a href={newsItem.url} target="_blank">
+            <a href={newsItem.url} target="_blank" rel="noreferrer">
               <b>short </b>
             </a>
             <span className="muted">
               by {newsItem.author ? newsItem.author : "unknown"} /{" "}
               {time
                 ? `${hour - 12}:${date[4].substring(3, 5)} pm`
-                : `${hour}:${date[4].substring(3, 5)} am`} on {date[2]} {date[1]} {date[3]}, {date[0]}
+                : `${hour}:${date[4].substring(3, 5)} am`}{" "}
+              on {date[2]} {date[1]} {date[3]}, {date[0]}
             </span>
           </span>
         </div>
@@ -38,7 +39,7 @@ const NewsCard = ({ newsItem }) => {
           <div className="description">{newsItem.description}</div>
           <span className="readmore">
             read more at{" "}
-            <a href={newsItem.url} target="_blank">
+            <a href={newsItem.url} target="_blank" rel="noreferrer">
               <b>{newsItem.source.name}</b>
             </a>
           </span>
